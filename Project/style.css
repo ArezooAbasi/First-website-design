@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner{
+    
+    width: 100%;
+    height: 100vh;
+    max-width: 100%;
+    background-image: 
+    linear-gradient(#141414c5, #0000009f), url(bg.png);
+    background-size:cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.logo{
+    margin: 10px 30px;
+    padding: 0 20px ;
+    width: 140px;
+    height: 20%;
+    cursor: pointer;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    padding: 0 20px;
+    position: relative;
+
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+
+}
+
+.navbar ul li::after{
+    content: " ";
+    height: 3px;
+    width: 0;
+    background: #009688 ;
+    position: absolute;
+    left: 6px;
+    bottom: -6px;
+    transition: 0.6s;
+}
+
+.navbar ul li:hover::after{
+    width: 90%;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    color: #fff;
+    text-align: center;
+}
+.content h1{
+    font-size: 50px;
+    color: #f3f1f1;
+    text-shadow: 2px 2px gray;
+    margin-left: 340px;
+}
+.content p{
+    font-weight: 400;
+    line-height: 25px;
+    color: white;
+    margin-top: 10px;
+    margin-left: 480px;
+    text-shadow: 2px 1px #554b4b;
+}
+
+.buttons{
+    margin-top: 30px;
+    margin-left: 460px;
+}
+
+button{
+    width: 200px;
+    padding: 15px 0;
+    position: relative;
+    display: inline-block;
+    border-radius: 35px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+
+span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 35px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s ease-out;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border: none;
+}
